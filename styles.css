@@ -48,3 +48,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+rect {
+  background-color: blue;
+}
