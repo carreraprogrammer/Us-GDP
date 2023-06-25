@@ -4,7 +4,7 @@ const drawChart = async () => {
 
   const width = 900;
   const height = 400;
-  const padding = 30;
+  const padding = 50;
 
   const yScale = d3.scaleLinear()
                    .domain([0, d3.max(data.data, (d) => d[1])])
@@ -12,7 +12,7 @@ const drawChart = async () => {
 
   const xScale = d3.scaleLinear()
                    .domain([0, data.data.length])
-                   .range([padding, width - padding])
+                   .range([padding, width - padding]);
 
   const svg = d3.select("#bar-chart")
                 .append("svg")
@@ -24,9 +24,9 @@ const drawChart = async () => {
      .enter()
      .append("rect")
      .attr("x", (d, i) => xScale(i))
-     .attr("y", (d, i) => yScale(d[1]) + padding)
+     .attr("y", (d, i) => yScale(d[1]))
      .attr("width", 3)
-     .attr("height", (d, i) => height - yScale(d[1]))
+     .attr("height", (d, i) => height - yScale(d[1]) - padding)
      .attr("fill", "red")
      .attr("class", "bar");
 
@@ -56,6 +56,18 @@ const drawChart = async () => {
         border-radius: 5px
       }
     `);
+
+    const xAxis = d3.axisBottom(xScale);
+    const yAxis = d3.axisLeft(yScale);
+    
+    svg.append("g")
+       .attr("transform", "translate(0," + (height - padding) + ")")
+       .call(xAxis);
+    
+    svg.append("g")
+       .attr("transform", "translate(" + padding + ",0)")
+       .call(yAxis);
+    
 
   let bars = document.getElementsByClassName("bar");
   let tags = document.getElementsByClassName("no-show");
