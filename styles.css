@@ -50,5 +50,17 @@ body {
 }
 
 rect {
-  background-color: blue;
+  cursor:pointer;
+}
+
+rect:hover {
+  fill: white;
+}
+
+.no-show {
+  display: none;
+}
+
+.show {
+  display: block;
 }
