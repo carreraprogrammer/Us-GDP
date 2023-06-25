@@ -6,12 +6,18 @@ const drawChart = async () => {
   const height = 400;
   const padding = 50;
 
+  const toYear = (string) => {
+    const date = new Date(string)
+    const year = date.getFullYear()
+    return year
+  }
+
   const yScale = d3.scaleLinear()
                    .domain([0, d3.max(data.data, (d) => d[1])])
                    .range([height - padding, padding]);
 
   const xScale = d3.scaleLinear()
-                   .domain([0, data.data.length])
+                   .domain([d3.min(data.data, (d) => toYear(d[0])), d3.max(data.data, (d) => toYear(d[0]))])
                    .range([padding, width - padding]);
 
   const svg = d3.select("#bar-chart")
@@ -23,7 +29,7 @@ const drawChart = async () => {
      .data(data.data)
      .enter()
      .append("rect")
-     .attr("x", (d, i) => xScale(i))
+     .attr("x", (d, i) => xScale(1946 + i/4))
      .attr("y", (d, i) => yScale(d[1]))
      .attr("width", 3)
      .attr("height", (d, i) => height - yScale(d[1]) - padding)
@@ -38,7 +44,11 @@ const drawChart = async () => {
      .attr("y", 170)
      .attr("width", 200)
      .attr("height", 80)
-     .html((d) => `<div class="text-container">${d[1]}</div>`)
+     .html((d) => `<div class="text-container">
+                    <p> $ ${d[1]} BILLION</p>
+                    <br>
+                    <p><b>DATE:</b> ${d[0]}</p>
+                   </div>`)
      .attr("class", "no-show");
 
   d3.select("svg")

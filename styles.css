@@ -64,3 +64,8 @@ rect:hover {
 .show {
   display: block;
 }
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
