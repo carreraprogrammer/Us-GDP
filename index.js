@@ -29,4 +29,11 @@ const svg = d3.select("#bar-chart")
             return d[1]
          })
          .attr("fill", "red")
-      
+
+      svg.selectAll("text")
+         .data(testArray)
+         .enter()
+         .append("text")
+         .text((d) => d[1])
+         .attr("x", (d,i) => i * 30)
+         .attr("y", (d,i) => height - d[1] -10)
