@@ -18,10 +18,15 @@ const svg = d3.select("#bar-chart")
          .data(testArray)
          .enter()
          .append("rect")
-         .attr("x", 0)
-         .attr("y", 0)
+         .attr("x", (d, i) => {
+            return i * 30
+         })
+         .attr("y", (d, i) => {
+            return height - d[1]
+         })
          .attr("width", 25)
-         .attr("height", 400)
+         .attr("height", (d, i) => {
+            return d[1]
+         })
+         .attr("fill", "red")
       
-    
-  
