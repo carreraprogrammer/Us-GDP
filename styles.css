@@ -47,7 +47,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(to bottom right, #0f4c75, #091c29);
 }
+
 
 rect {
   cursor:pointer;
@@ -68,4 +70,18 @@ rect:hover {
 .text-container {
   display: flex;
   flex-direction: column;
+}
+
+#title {
+  font-size: 48px;
+  width: 100%;
+  text-align: center;
+}
+
+#bar-chart {
+  border: 1px solid black;
+  padding: 30px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }

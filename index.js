@@ -29,7 +29,7 @@ const drawChart = async () => {
      .data(data.data)
      .enter()
      .append("rect")
-     .attr("x", (d, i) => xScale(1946 + i/4))
+     .attr("x", (d, i) => xScale(1946 + i/3.99))
      .attr("y", (d, i) => yScale(d[1]))
      .attr("width", 3)
      .attr("height", (d, i) => height - yScale(d[1]) - padding)
@@ -58,7 +58,7 @@ const drawChart = async () => {
         height: 100%;
         width: 100%;
         border: 2px solid black;
-        background-color: rgba(0, 0, 255, 0.149);
+        background-color: rgba(0, 0, 255, 0.749);
         color: black;
         display: flex;
         justify-content: center;
