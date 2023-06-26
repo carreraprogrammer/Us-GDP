@@ -39,6 +39,13 @@
 
 The visualization is implemented using D3.js, a powerful JavaScript library for creating interactive data visualizations in web browsers. The chart is rendered as an SVG (Scalable Vector Graphics) element within the HTML page.
 
+<div align="center">
+
+  <img src="./preview.png" alt="logo" width="140"  height="auto" />
+  <br/>
+
+</div>
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -186,9 +193,21 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+-[x] Data Fetching: The project uses the fetch API to asynchronously retrieve the GDP data from the provided JSON file.
+
+-[x] Data Transformation: The fetched data is processed and transformed to extract the necessary information, such as the GDP values and corresponding dates. The toYear function converts the date strings to year values.
+
+-[x] Scaling: The d3.scaleLinear function is used to create linear scales for both the x and y axes. These scales map the input domain (minimum and maximum values from the data) to the output range (dimensions of the chart).
+
+-[x] Chart Rendering: The SVG element is created and appended to the designated container in the HTML. Rectangular bars representing each data point are drawn using the rect elements. The height of each bar corresponds to the GDP value, and the x-coordinate is calculated based on the year using the xScale.
+
+-[x] Data Labels: Additional information is displayed for each bar using the foreignObject elements. These elements contain HTML content, including the GDP value in billions and the corresponding date. Styling is applied to achieve a consistent appearance.
+
+-[x] Interactive Features: The project enables interactivity by associating each bar with a corresponding data label. When hovering over a bar, the associated data label is displayed, providing more detailed information. This feature is implemented using event listeners and CSS classes.
+
+-[x] Axis Creation: The x and y axes are created using the axisBottom and axisLeft functions from D3.js. The axes are appended to the SVG element, and appropriate transformations are applied to position them correctly.
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
