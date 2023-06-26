@@ -41,7 +41,7 @@ The visualization is implemented using D3.js, a powerful JavaScript library for 
 
 <div align="center">
 
-  <img src="./preview.png" alt="logo" width="140"  height="auto" />
+  <img src="./preview.png" alt="logo" width="auto"  height="auto" />
   <br/>
 
 </div>
