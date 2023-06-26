@@ -31,11 +31,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [UNITED STATES] <a name="about-project"></a>
+# 📖 [UNITED STATES GDP] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**[UNITED STATES]** This GitHub project is a data visualization tool that displays the Gross Domestic Product (GDP) data of various countries over a specific time period. The project fetches the GDP data from a JSON file hosted on freeCodeCamp's GitHub repository.
+**[UNITED STATES GDP]** This GitHub project is a data visualization tool that displays the Gross Domestic Product (GDP) data of various countries over a specific time period. The project fetches the GDP data from a JSON file hosted on freeCodeCamp's GitHub repository.
 
 The visualization is implemented using D3.js, a powerful JavaScript library for creating interactive data visualizations in web browsers. The chart is rendered as an SVG (Scalable Vector Graphics) element within the HTML page.
 
