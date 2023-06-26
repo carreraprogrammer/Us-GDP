@@ -31,11 +31,13 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [UNITED STATES] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+**[UNITED STATES]** This GitHub project is a data visualization tool that displays the Gross Domestic Product (GDP) data of various countries over a specific time period. The project fetches the GDP data from a JSON file hosted on freeCodeCamp's GitHub repository.
+
+The visualization is implemented using D3.js, a powerful JavaScript library for creating interactive data visualizations in web browsers. The chart is rendered as an SVG (Scalable Vector Graphics) element within the HTML page.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -44,25 +46,19 @@
 > Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
-  <summary>Client</summary>
+  <summary>Library</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://reactjs.org/">D3.js</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://expressjs.com/">javascript</a></li>
   </ul>
 </details>
 
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
 
 <!-- Features -->
 
@@ -176,17 +172,11 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Daniel Carrera**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@carreraprogrammer](https://github.com/carreraprogrammer )
+- Twitter: [@carreraprog](https://twitter.com/carreraprog)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/daniel-carrera-85a917244/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
