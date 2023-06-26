@@ -73,9 +73,11 @@ The visualization is implemented using D3.js, a powerful JavaScript library for 
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- Data Fetching: The project uses the fetch API to asynchronously retrieve the GDP data from the provided JSON file.
+
+- Data Transformation: The fetched data is processed and transformed to extract the necessary information, such as the GDP values and corresponding dates. The toYear function converts the date strings to year values.
+
+- Scaling: The d3.scaleLinear function is used to create linear scales for both the x and y axes. These scales map the input domain (minimum and maximum values from the data) to the output range (dimensions of the chart).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
