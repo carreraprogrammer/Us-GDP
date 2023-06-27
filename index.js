@@ -2,8 +2,8 @@ const drawChart = async () => {
   const response = await fetch('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json');
   const data = await response.json();
 
-  const width = 900;
-  const height = 400;
+  const width = 1200;
+  const height = 500;
   const padding = 50;
 
   const toYear = (string) => {
