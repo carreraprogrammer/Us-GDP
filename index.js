@@ -33,7 +33,7 @@ const drawChart = async () => {
      .attr("y", (d, i) => yScale(d[1]))
      .attr("width", 3.5)
      .attr("height", (d, i) => height - yScale(d[1]) - padding)
-     .attr("fill", "gray")
+     .attr("fill", "rgb(0, 136, 255)")
      .attr("class", "bar");
 
   svg.selectAll("foreignObject")
