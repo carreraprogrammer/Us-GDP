@@ -40,7 +40,7 @@ const drawChart = async () => {
      .data(data.data)
      .enter()
      .append("foreignObject")
-     .attr("x", (d, i) => i * 2)
+     .attr("x", (d, i) => i * 4)
      .attr("y", 300)
      .attr("width", 200)
      .attr("height", 80)
