@@ -3,8 +3,8 @@ const drawChart = async () => {
   const data = await response.json();
 
   const width = 1200;
-  const height = 500;
-  const padding = 50;
+  const height = 700;
+  const padding = 85;
 
   const toYear = (string) => {
     const date = new Date(string)
@@ -29,9 +29,9 @@ const drawChart = async () => {
      .data(data.data)
      .enter()
      .append("rect")
-     .attr("x", (d, i) => xScale(1946 + i/3.99))
+     .attr("x", (d, i) => xScale(1946 + i/3.98))
      .attr("y", (d, i) => yScale(d[1]))
-     .attr("width", 3)
+     .attr("width", 3.5)
      .attr("height", (d, i) => height - yScale(d[1]) - padding)
      .attr("fill", "red")
      .attr("class", "bar");
@@ -77,6 +77,22 @@ const drawChart = async () => {
     svg.append("g")
        .attr("transform", "translate(" + padding + ",0)")
        .call(yAxis);
+    
+    svg.append("text")
+       .attr("transform", "rotate(-90)")
+       .attr("x", - height / 2)
+       .attr("y", padding / 5)
+       .attr("text-anchor", "middle")
+       .text("GDP (USD)")
+       .attr("class", "axis-name");
+
+    svg.append("text")
+       .attr("x", width / 2)
+       .attr("y", height - padding/4 )
+       .attr("text-anchor", "middle")
+       .text("YEAR")
+       .attr("class", "axis-name");
+    
     
 
   let bars = document.getElementsByClassName("bar");
