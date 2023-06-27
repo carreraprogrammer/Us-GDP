@@ -40,8 +40,8 @@ const drawChart = async () => {
      .data(data.data)
      .enter()
      .append("foreignObject")
-     .attr("x", (d, i) => i * 2 + 5)
-     .attr("y", 170)
+     .attr("x", (d, i) => i * 2)
+     .attr("y", 300)
      .attr("width", 200)
      .attr("height", 80)
      .html((d) => `<div class="text-container">
